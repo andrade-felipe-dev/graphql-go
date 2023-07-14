@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ..
+    entrypoint: sh -c "./initgraphql.sh"
+    container_name: mygolang
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
+    tty:
+      true
