@@ -4,11 +4,10 @@ services:
   app:
     build:
       context: .
-    entrypoint: sh -c "sh ./initgraphql.sh"
-    container_name: mygolang
+    entrypoint: sh -c "sh ./initgraphql.sh" #script inicial
+    #entrypoint: sh -c "go mod tidy && go run server.go" #depois de inicializar pela primeira vez 
+    container_name: mygolang 
     volumes:
       - .:/app
-    ports:
-      - 8080:8080
     tty:
       true
