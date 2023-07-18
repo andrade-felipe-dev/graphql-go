@@ -5,4 +5,4 @@ printf '// +build tools\npackage tools\nimport (_ "github.com/99designs/gqlgen"\
 go mod tidy &&
 go run github.com/99designs/gqlgen init &&
 
-go run main.go
+go run server.go
